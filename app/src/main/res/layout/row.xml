@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:layout_marginTop="7dp"
+    android:layout_marginLeft="15dp"
+    android:paddingBottom="7dp">
 
     <TextView
         android:id="@+id/adaptName"
@@ -13,23 +15,26 @@
         android:textSize="21dp"
         android:textStyle="bold"
         android:text="Name of Drug"
-        android:paddingLeft="5dp"
+        android:padding="5dp"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/bar_bottom"/>
+        android:textAlignment="center"
+        android:background="@drawable/box_top"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="75dp"
+            android:layout_width="90dp"
             android:layout_height="75dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/i_check"
+            android:background="@drawable/box_bottom"
             android:id="@+id/image"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="75dp"
+            android:orientation="vertical"
+            android:background="@color/colorMist">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -47,18 +52,34 @@
                     android:textStyle="bold"
                     android:text=":"
                     android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Rp."
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/adaptPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="Rp. N/A"
-                    android:layout_margin="5dp"/>
+                    android:text="N/A"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="2dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/adaptId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
                 <TextView
                     android:layout_width="75dp"
                     android:layout_height="wrap_content"
@@ -79,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="Rp. N/A"
+                    android:text="N/A"
                     android:layout_margin="5dp"/>
             </LinearLayout>
         </LinearLayout>
